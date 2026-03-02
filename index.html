@@ -5,27 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ninjago Codex | Masters of Spinjitzu</title>
     <style>
-        body {
-            background-color: #0b0b0b;
-            color: white;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            text-align: center;
-        }
-        header {
-            background: linear-gradient(to bottom, #d4af37, #8a6d3b);
-            padding: 50px 20px;
-            border-bottom: 4px solid #fff;
-        }
-        h1 { margin: 0; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; }
+        body { background-color: #0b0b0b; color: white; font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; }
+        header { background: linear-gradient(to bottom, #d4af37, #8a6d3b); padding: 60px 20px; border-bottom: 4px solid #fff; }
+        h1 { margin: 0; font-size: 3rem; text-transform: uppercase; letter-spacing: 5px; color: #000; text-shadow: 2px 2px #fff; }
+        .nav { background: #1a1a1a; padding: 15px; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid #333; }
+        .nav a { color: #d4af37; margin: 0 20px; text-decoration: none; font-weight: bold; text-transform: uppercase; }
         
-        .nav { background: #1a1a1a; padding: 15px; position: sticky; top: 0; z-index: 100; }
-        .nav a { color: #d4af37; margin: 0 20px; text-decoration: none; font-weight: bold; }
-
         .ninja-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             padding: 40px;
             max-width: 1200px;
             margin: 0 auto;
@@ -34,72 +23,92 @@
         .ninja-card {
             background: #222;
             border-radius: 15px;
-            padding: 20px;
-            transition: transform 0.3s;
-            border-bottom: 5px solid transparent;
+            padding: 25px;
+            transition: 0.3s;
+            border-bottom: 8px solid #444;
         }
-        .ninja-card:hover { transform: translateY(-10px); }
+        .ninja-card:hover { transform: translateY(-10px); background: #2a2a2a; }
         
-        /* Elemental Accents */
+        /* Elemental Border Colors */
         .kai { border-color: #ff4b2b; }
         .jay { border-color: #00d4ff; }
         .cole { border-color: #ffa500; }
-        .zane { border-color: #fff; }
+        .zane { border-color: #f8fafc; }
+        .lloyd { border-color: #32cd32; }
+        .nya { border-color: #0077be; }
 
         .btn {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
+            margin-top: 20px;
+            padding: 12px 25px;
             background: #d4af37;
             color: black;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: bold;
+            transition: 0.2s;
         }
+        .btn:hover { background: #fff; transform: scale(1.05); }
+        h2 { font-size: 2.5rem; margin-top: 40px; color: #d4af37; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Ninjago Codex</h1>
-    <p>Everything you need to know about the Realm of Ninjago</p>
+    <p style="color: #000; font-weight: bold;">The Ultimate Guide to the Masters of Spinjitzu</p>
 </header>
 
 <div class="nav">
     <a href="index.html">Home</a>
     <a href="#ninja">The Ninja</a>
-    <a href="#history">Seasons</a>
-    <a href="#map">Map</a>
-</div>
+</nav>
 
 <section id="ninja">
-    <h2>Meet the Team</h2>
+    <h2>Select Your Ninja</h2>
     <div class="ninja-grid">
         <div class="ninja-card kai">
             <h3>Kai</h3>
-            <p>Master of Fire. Brave, hot-headed, and incredibly loyal.</p>
-            <a href="#" class="btn">View Profile</a>
+            <p>Master of Fire. Brave, impulsive, and the heart of the team.</p>
+            <a href="kai.html" class="btn">View Profile</a>
         </div>
+
         <div class="ninja-card jay">
             <h3>Jay</h3>
-            <p>Master of Lightning. The joker of the group and a brilliant inventor.</p>
-            <a href="#" class="btn">View Profile</a>
+            <p>Master of Lightning. Fast, funny, and a genius inventor.</p>
+            <a href="jay.html" class="btn">View Profile</a>
         </div>
+
         <div class="ninja-card cole">
             <h3>Cole</h3>
-            <p>Master of Earth. Strong, grounded, and loves a good piece of cake.</p>
-            <a href="#" class="btn">View Profile</a>
+            <p>Master of Earth. The strongest ninja with a love for cake.</p>
+            <a href="cole.html" class="btn">View Profile</a>
         </div>
+
         <div class="ninja-card zane">
             <h3>Zane</h3>
-            <p>Master of Ice. A Nindroid with a heart of gold and cold precision.</p>
-            <a href="#" class="btn">View Profile</a>
+            <p>Master of Ice. A logical Nindroid with a mysterious past.</p>
+            <a href="zane.html" class="btn">View Profile</a>
+        </div>
+
+        <div class="ninja-card lloyd">
+            <h3>Lloyd</h3>
+            <p>The Green Ninja. Leader of the team and son of Garmadon.</p>
+            <a href="lloyd.html" class="btn">View Profile</a>
+        </div>
+
+        <div class="ninja-card nya">
+            <h3>Nya</h3>
+            <p>Master of Water. Once Samurai X, now the soul of the ocean.</p>
+            <a href="nya.html" class="btn">View Profile</a>
         </div>
     </div>
 </section>
 
-<footer style="padding: 50px; color: #444;">
-    <p>&copy; 2026 Ninjago Fan Project. Not affiliated with LEGO.</p>
+<footer style="padding: 60px; color: #666; font-size: 0.9rem;">
+    <hr style="border: 0; border-top: 1px solid #333; margin-bottom: 20px;">
+    <p>Ninjago and all characters are trademarks of the LEGO Group.</p>
+    <p>Created by a True Elemental Master.</p>
 </footer>
 
 </body>
